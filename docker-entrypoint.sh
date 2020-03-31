@@ -1,5 +1,5 @@
 #!/bin/sh
 
-envsubst /default.tmpl > /etc/nginx/conf.d/default.conf
+cat /default.tmpl | envsubst > /etc/nginx/conf.d/default.conf
 
-exec $@
+cat /etc/nginx/conf.d/default.conf
